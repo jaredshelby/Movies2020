@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End CSS Reset */
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    transition: color 0.25s, border-bottom 0.25s;
+}
+a:hover {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+button {
+  border: 1px solid #000000;
+  border-radius: 0.4rem;
+  background: #FFFFFF;
+  color: #000000;
+  font-size: 1.5vw;
+  font-weight: 600;
+  /* line-height: 1.2; */
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.5rem 0rem;
+  /* margin: 0.25rem; */
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+button:hover {
+  color: #FFFFFF;
+  background: #000000;
+}
+
+
+/* Header styles */
+
+header {
+    padding: 2em;
+}
+
+/* End Header styles */
+
+/* List and List Entry Styles */
+
+.list {
+    margin: 0 auto;
+}
+.hide {
+    display: none;/
+}
+.show {
+    display:block;
+}
+.list-entry {
+    display: grid;
+    grid-template-columns: 1fr 14fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    border-bottom: 1px dashed #000000;
+    padding: 1em 2.25em;
+    font-family: 'Libre Baskerville', serif;
+}
+img.rating {
+    width: 100%;
+    align-self: center;
+}
+div.info-panel {
+    grid-column-start: 2;
+}
+.five-star {
+  background-color: #EAD2DC;
+}
+.four-five-star {
+  background-color: #D9D2EA;
+}
+.four-star {
+  background-color: #CFE3F3;
+}
+.three-five-star {
+  background-color: #C9DAF8;
+}
+.three-star {
+  background-color: #D0E0E3;
+}
+.two-five-star {
+  background-color: #D9EAD3;
+}
+.two-star {
+  background-color: #FFF2CC;
+}
+.one-five-star {
+  background-color: #FCE5CD;
+}
+.one-star {
+  background-color: #F4CCCC;
+}
+.half-star {
+  background-color: #E6B8AF;
+}
+span.number {
+  font-size: 3vw;
+  color: #FFFFFF;
+  font-style: italic;
+}
+span.number::after {
+  content: ".";
+  font-size: smaller;
+}
+span.movie-title {
+  font-size: 3vw;
+  align-self: center;
+  font-style: italic;
+}
+.director-year {
+    grid-column-start: 2;
+}
+.director::after {
+  content: ",";
+}
+.review {
+    padding-bottom: 1em;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6em;
+    font-size: 2vw;
+}
+.trailer {
+    padding-bottom: 1em;
+}
+/* End List and List Entry Styles */
+
+
+/* Fix for responsive videos */
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* End fix for responsive videos */
