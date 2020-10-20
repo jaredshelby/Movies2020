@@ -68,7 +68,7 @@ a:hover {
 button {
   border: 1px solid #000000;
   border-radius: 0.4rem;
-  background: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.4);
   color: #000000;
   font-size: 1.5vw;
   font-weight: 600;
@@ -84,14 +84,47 @@ button {
 }
 button:hover {
   color: #FFFFFF;
-  background: #000000;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
+h1 {
+  text-align: center;
+}
 
 /* Header styles */
 
 header {
-    padding: 2em;
+  padding: 1.5em;
+  background: #FFFFFF;
+}
+header a {
+  border-bottom: none;
+}
+header a:hover {
+  border-bottom: none;
+}
+
+a#menu img {
+    position: fixed;
+    width: 3.5vw;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  z-index: 1;
+}
+.sticky + .list {
+  padding-top: 75px;
+}
+.sticky h1 {
+  text-align: left;
+  margin: 0 9vw;
+}
+.sticky img#header-logo {
+  width: 15vw;
 }
 
 /* End Header styles */
@@ -157,6 +190,7 @@ span.number {
   font-size: 3vw;
   color: #FFFFFF;
   font-style: italic;
+  text-shadow: 1px 1px 10px grey;
 }
 span.number::after {
   content: ".";

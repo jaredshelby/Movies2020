@@ -6,6 +6,22 @@ function handleFirstTab(e) {
     }
 }
 
+// Fixed header on scroll
+window.onscroll = function() {headerScroll()};
+var header = document.getElementById("fixed-header");
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function headerScroll() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+    document.getElementById("header-logo").src = "images/logo-sm.svg";
+  } else {
+    header.classList.remove("sticky");
+      document.getElementById("header-logo").src = "images/logo-bg.svg";
+  }
+}
+
 window.addEventListener('keydown', handleFirstTab);
 
 //Dynamic list numbers to ease rearranging of entries
