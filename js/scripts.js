@@ -26,6 +26,24 @@ function headerScroll() {
   }
 }
 
+// Overlay Menu Show Hide
+let toggle = false;
+function chngimg() {
+    if (toggle === true) {
+        document.getElementById('menu-image').src  = 'images/menu-icon.svg';
+    }
+     else {
+       document.getElementById('menu-image').src = 'images/menu-icon-close.svg';
+   }
+    toggle = !toggle;
+}
+
+const menuIcon = document.getElementById("menu");
+menuIcon.addEventListener('click', ()=>{
+  document.getElementById("overlay").classList.toggle("show");
+  chngimg();
+});
+
 // Dropdown Menu
 
 // Add Event listener
