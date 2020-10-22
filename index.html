@@ -9,6 +9,8 @@
   <meta name="author" content="Jared Shelby">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/lite-yt-embed.css?v=1.0">
   <link rel="stylesheet" href="css/normalize.css?v=1.0">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
@@ -16,6 +18,9 @@
 
 <body>
   <header id="fixed-header">
+    <div class="overlay">
+
+    </div>
     <a href="#" id="menu">
       <img src="images/menu-icon.svg" alt="Menu">
     </a>
@@ -24,10 +29,22 @@
         <img src="images/logo-bg.svg" alt="My Year in Movies 2020" id="header-logo"/>
       </a>
     </h1>
-
+    <div class="dropdown">
+      <button class="dropbtn">Jump to:</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#"><img class="rating" src="images/5star.png" alt="5 stars out of 5"></a>
+        <a href="#fourstars"><img class="rating" src="images/4star.png" alt="4 stars out of 5"></a>
+        <a href="#threestars"><img class="rating" src="images/3star.png" alt="3 stars out of 5"></a>
+        <a href="#twostars"><img class="rating" src="images/2star.png" alt="2 stars out of 5"></a>
+        <a href="#onestar"><img class="rating" src="images/1star.png" alt="1 stars out of 5"></a>
+      </div>
+    </div>
   </header>
 
   <div class="list">
+
+    <!-- <a class="anchor" id="fivestars"></a> -->
+
     <div class="list-entry five-star">
       <span class="number"></span>
       <span class="movie-title">2001: A Space Odyssey</span>
@@ -38,12 +55,33 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-entry five-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/5star.png" alt="5 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -59,12 +97,56 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gAe1CJWH_B8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-entry four-five-star">
+      <span class="number"></span>
+      <span class="movie-title">The Killing</span>
+      <img class="rating" src="images/4-5star.png" alt="4.5 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1956</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="anchor" id="fourstars"></a>
+
+    <div class="list-entry four-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/4star.png" alt="4 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -80,12 +162,12 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -101,12 +183,56 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-entry three-five-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/3-5star.png" alt="3.5 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <a class="anchor" id="threestars"></a>
+
+    <div class="list-entry three-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/3star.png" alt="3 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -122,12 +248,12 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -143,12 +269,56 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-entry two-five-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/2-5star.png" alt="2.5 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="anchor" id="twostars"></a>
+
+    <div class="list-entry two-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/2star.png" alt="2 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -164,12 +334,12 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -185,12 +355,56 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-entry one-five-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/1-5star.png" alt="1.5 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="anchor" id="onestar"></a>
+
+    <div class="list-entry one-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/1star.png" alt="1 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -206,12 +420,12 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -227,12 +441,33 @@
       </div>
       <button type="button" name="button1" class="trigger">More +</button>
       <div class="info-panel hide">
-        <div class="review">
+        <div class="notes">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
         </div>
         <div class="trailer">
           <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oR_e9y-bka0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-entry half-star">
+      <span class="number"></span>
+      <span class="movie-title">2001: A Space Odyssey</span>
+      <img class="rating" src="images/halfstar.png" alt="0.5 stars out of 5">
+      <div class="director-year">
+      <a href="#" class="director" id="kubrick">Stanley Kubrick</a>
+        <span class="release-year">1968</span>
+      </div>
+      <button type="button" name="button1" class="trigger">More +</button>
+      <div class="info-panel hide">
+        <div class="notes">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in enim non dolor accumsan euismod a in sem. Donec at dolor volutpat, finibus justo rutrum, efficitur ante. Aliquam rutrum dui nec tortor pharetra, quis gravida arcu imperdiet. Pellentesque facilisis odio vel est viverra, at consequat dolor mattis. Donec pretium arcu tristique congue venenatis. Nulla pharetra, sapien vitae efficitur ornare, nisl ligula euismod libero, at varius ex metus id risus.</p>
+        </div>
+        <div class="trailer">
+          <div class="video-wrap">
+            <lite-youtube videoid="oR_e9y-bka0"></lite-youtube>
           </div>
         </div>
       </div>
@@ -240,11 +475,15 @@
 
   </div>
 
-  <footer>
 
+  <footer>
+    <p>
+      Design, code, and opinions by <a href="https://www.jaredshelby.com" target="_blank" alt="JaredShelby.com">Jared Shelby.</a>
+    </p>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/lite-yt-embed.js"></script>
+  <script type="module" src="js/scripts.js"></script>
 
 </body>
 </html>

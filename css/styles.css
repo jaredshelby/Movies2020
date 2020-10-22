@@ -86,15 +86,20 @@ button:hover {
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.6);
 }
-h1 {
-  text-align: center;
-}
 
 /* Header styles */
 
 header {
+  position: relative;
   padding: 1.5em;
   background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  -webkit-box-shadow: 0px 2px 8px 1px rgba(196,196,196,1);
+  -moz-box-shadow: 0px 2px 8px 1px rgba(196,196,196,1);
+  box-shadow: 0px 2px 8px 1px rgba(196,196,196,1);
 }
 header a {
   border-bottom: none;
@@ -102,32 +107,116 @@ header a {
 header a:hover {
   border-bottom: none;
 }
-
+a#menu {
+  min-width: 11vw;
+  z-index: 1;
+}
 a#menu img {
-    position: fixed;
-    width: 3.5vw;
+  width: 3.5vw;
+}
+img#header-logo {
+    width: 25vw;
 }
 
 .sticky {
   position: fixed;
+  height: 80px;
   top: 0;
-  width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  z-index: 1;
+  left: 0;
+  right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  justify-content: flex-start;
 }
 .sticky + .list {
-  padding-top: 75px;
-}
-.sticky h1 {
-  text-align: left;
-  margin: 0 9vw;
+  padding-top: 80px;
 }
 .sticky img#header-logo {
   width: 15vw;
 }
+.sticky .dropdown {
+    margin-left: auto;
+}
+/* Dropdown Button */
+.dropbtn {
+  padding: .75em 1.25em;
+  font-size: 1.7vw;
+  width: inherit;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  width: 13vw;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  width: inherit;
+  box-shadow: -1px 4px 15px 1px rgba(0,0,0,0.1);
+  z-index: 1;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 1em 1em;
+  text-decoration: none;
+  display: block;
+  font-size: 1.7vw;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 1px solid black;
+}
+.dropdown-content a:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.dropdown-content a:last-child {
+  border-bottom: none;
+  border-radius: 0px 0px 10px 10px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid black;
+}
+.dropdown-content a:hover img {
+  filter: invert(100%) sepia(3%) saturate(559%) hue-rotate(170deg) brightness(116%) contrast(100%);
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.anchor::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 /* End Header styles */
+
+/* Menu overlay styles */
+
+.overlay {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* End Menu overlay styles */
 
 /* List and List Entry Styles */
 
@@ -207,7 +296,7 @@ span.movie-title {
 .director::after {
   content: ",";
 }
-.review {
+.notes {
     padding-bottom: 1em;
     font-family: 'Lato', sans-serif;
     line-height: 1.6em;
@@ -234,3 +323,22 @@ span.movie-title {
     height: 100%;
 }
 /* End fix for responsive videos */
+
+/* Footer styles */
+footer {
+    padding: 2em 2em;
+    font-size: 3vw;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.05vw;
+    text-align: right;
+    font-style: italic;
+}
+footer a {
+  font-style: normal;
+}
+footer a:hover {
+    background-color:rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid black;
+}
+
+/* End Footer styles */

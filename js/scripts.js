@@ -1,3 +1,5 @@
+
+
 // Adding back in focus styles for keyboard users
 function handleFirstTab(e) {
     if (e.keyCode === 9) { // the "I am a keyboard user" key
@@ -5,6 +7,8 @@ function handleFirstTab(e) {
         window.removeEventListener('keydown', handleFirstTab);
     }
 }
+
+window.addEventListener('keydown', handleFirstTab);
 
 // Fixed header on scroll
 window.onscroll = function() {headerScroll()};
@@ -22,7 +26,30 @@ function headerScroll() {
   }
 }
 
-window.addEventListener('keydown', handleFirstTab);
+// Dropdown Menu
+
+// Add Event listener
+const dropButton = document.getElementsByClassName("dropbtn");
+dropButton[0].addEventListener('click', ()=>{
+  document.getElementById("myDropdown").classList.toggle("show");
+});
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
 //Dynamic list numbers to ease rearranging of entries
 var entries = document.getElementsByClassName('number');
