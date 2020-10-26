@@ -338,7 +338,7 @@ span.movie-title {
 
 /* Footer styles */
 footer {
-    padding: 2em 2em;
+    padding: 2em 1.75em;
     font-size: 3vw;
     font-family: 'Lato', sans-serif;
     letter-spacing: 0.05vw;

@@ -19,10 +19,10 @@ var sticky = header.offsetTop;
 function headerScroll() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
-    document.getElementById("header-logo").src = "images/logo-sm.svg";
+    document.getElementById("header-logo").src = "images/logo-sm-2.svg";
   } else {
     header.classList.remove("sticky");
-      document.getElementById("header-logo").src = "images/logo-bg.svg";
+      document.getElementById("header-logo").src = "images/logo-bg-2.svg";
   }
 }
 
