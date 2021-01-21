@@ -86,7 +86,11 @@ Array.prototype.forEach.call(buttonList, function(element, index, array){
     } else {
       this.innerText = "More +";
     }
-
+    // Need to figure out a way to close any open panels when opening a new one. This way does not work.
+    // const opened = document.getElementsByClassName("show")
+    // if(opened) {
+    //   opened.classList.toggle("show");
+    // }
     const element = this.nextElementSibling;
     element.classList.toggle("show");
   });
